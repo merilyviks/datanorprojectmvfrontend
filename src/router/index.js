@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import SortedTablePlugin from "vue-sorted-table"
 import checkweather from "@/views/checkweather";
+import mainsite from "@/views/mainsite";
 
 Vue.use(VueRouter)
 Vue.use(SortedTablePlugin);
@@ -10,11 +11,11 @@ const routes = [
     {
         path: '/',
         name: 'Pealeht',
-        component: checkweather
+        component: mainsite
     },
     {
         path: '/ilm',
-        name: 'checkweather',
+        name: 'Ilm',
         component: checkweather
     }
 

@@ -8318,6 +8318,13 @@
   "resolved" "https://registry.npmjs.org/vue-router/-/vue-router-3.4.9.tgz"
   "version" "3.4.9"
 
+"vue-sorted-table@^1.2.0":
+  "integrity" "sha512-pW9WeE35I8BrZHqAYts3tvB1zTckSIWijEJgzSaDbkupPpr4ZeU++H8kU/50nXf5aZCqVQa2FKnZ3Z4636+RLg=="
+  "resolved" "https://registry.npmjs.org/vue-sorted-table/-/vue-sorted-table-1.2.0.tgz"
+  "version" "1.2.0"
+  dependencies:
+    "vue" "^2.6.8"
+
 "vue-style-loader@^4.1.0", "vue-style-loader@^4.1.2":
   "integrity" "sha512-0ip8ge6Gzz/Bk0iHovU9XAUQaFt/G2B61bnWa2tCcqqdgfHs1lF9xXorFbE55Gmy92okFT+8bfmySuUOu13vxQ=="
   "resolved" "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.2.tgz"
@@ -8339,7 +8346,7 @@
   "resolved" "https://registry.yarnpkg.com/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   "version" "1.9.1"
 
-"vue@^2 || ^3.0.0-0", "vue@^2.6.11":
+"vue@^2 || ^3.0.0-0", "vue@^2.6.11", "vue@^2.6.8":
   "integrity" "sha512-uhmLFETqPPNyuLLbsKz6ioJ4q7AZHzD8ZVFNATNyICSZouqP2Sz0rotWQC8UNBF6VGSCs5abnKJoStA6JbCbfg=="
   "resolved" "https://registry.yarnpkg.com/vue/-/vue-2.6.12.tgz"
   "version" "2.6.12"
