@@ -4,12 +4,13 @@ import router from './router'
 
 import axios from 'axios'
 import SortedTablePlugin from 'vue-sorted-table'
+import VueRouter from "vue-router";
 
 
 Vue.config.productionTip = false
 Vue.prototype.$http = axios
 
-
+Vue.use(VueRouter)
 Vue.use(SortedTablePlugin);
 
 new Vue({
