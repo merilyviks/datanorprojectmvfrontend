@@ -8,9 +8,25 @@
     </p>
     <button v-on:click="addcity()">Lisa nimi!</button>
 
+    <table border="0" align="center" width="45%">
+      <tr>
+        <th>Linna nimi</th>
+        <th>Temperatuur</th>
+        <th>Tuulekiirus</th>
+        <th>Niiskus</th>
+        <th>Aeg</th>
+      </tr>
+      <tr v-for="(id, linn) in response" :key="(id, linn)">
+        <td>{{linn}}</td>
+        <td>{{}}</td>
+
+
+      </tr>
+    </table>
+
     <p>
-    <select v-on="getallcitynames()">
-      <option v-for="cityName in cityList" :key="cityName">{{cityName}}</option>
+    <select v-model="selected">
+      <option v-for="x in cityList" :key="x">{{x}}</option>
     </select>
     </p>
 
@@ -25,14 +41,14 @@ let addcityFunction = function () {
   this.$http.post(url, this.see)
 }
 
-let cityList;
+let cityList = [];
+
 let getallcitynamesFunction = function () {
-  alert("töötab")
   this.$http.get("http://localhost:8099/getallcitynames").then(response => response.data)
       .then(function (response) {
-          console.log(response)
-
-          cityList = response
+          console.log(response[0].cityName)
+          cityList.push(response[0].cityName)
+        cityList.push(response[1].cityName)
           console.log(cityList)
           }
       )
@@ -42,16 +58,20 @@ export default {
   name: "checkweather",
   methods: {
     addcity: addcityFunction,
-    getallcitynames: getallcitynamesFunction
+    getallcitynameFunction: getallcitynamesFunction
 
   },
   data () {
       return {
         see: {},
+        response: [{}],
+        selected: "",
         cityName: "",
-        allcitynames: {},
         cityList: []
       }
+  },
+  created() {              // aktiveerib funktsiooni lehe laadimisel
+    this.getallcitynameFunction();
   }
 }
 </script>
